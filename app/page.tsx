@@ -56,9 +56,9 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center gap-8 text-center md:flex-row md:text-left"
         >
-          <Avatar className="h-32 w-32 border-4 border-primary/20">
+          <Avatar className="h-48 w-48 border-4 border-primary/20 shadow-xl">
             <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-            <AvatarFallback className="text-3xl font-bold bg-gradient-to-br from-primary to-primary/50">
+            <AvatarFallback className="text-5xl font-bold bg-gradient-to-br from-primary to-primary/50">
               {DATA.initials}
             </AvatarFallback>
           </Avatar>
