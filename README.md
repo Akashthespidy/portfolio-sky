@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio - Billal Ahmed Akash
 
-## Getting Started
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS, showcasing professional experience, projects, awards, and research.
 
-First, run the development server:
+## 🚀 Features
+
+- **Modern Design**: Clean, professional UI with dark mode support
+- **Responsive**: Fully responsive design that works on all devices
+- **Animated**: Smooth animations using Framer Motion
+- **TypeScript**: Fully typed for better development experience
+- **SEO Optimized**: Proper meta tags and semantic HTML
+- **Fast**: Built with Next.js for optimal performance
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **UI Components**: shadcn/ui
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+
+## 📦 Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Install dependencies
+pnpm install
+
+# Run development server
 pnpm dev
-# or
-bun dev
+
+# Build for production
+pnpm build
+
+# Start production server
+pnpm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Update Personal Information
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Edit `/lib/data.ts` to update your personal information, including:
+- Name, contact details, and location
+- Work experience
+- Education
+- Projects
+- Awards and achievements
+- Research work
+- Skills
 
-## Learn More
+### Update Images
 
-To learn more about Next.js, take a look at the following resources:
+Replace the following images in the `/public` directory:
+- `avatar.jpg` - Your profile picture
+- `geekly.png` - Company logo
+- `jnu.png` - University logo
+- Project screenshots (`foodies.png`, `spinwheel.png`, `supershop.png`)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Customize Colors
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The color scheme can be customized in `/app/globals.css` by modifying the CSS variables in the `:root` and `.dark` sections.
 
-## Deploy on Vercel
+## 📄 Sections
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Hero**: Introduction with animated typewriter effect
+2. **About**: Brief summary of your background
+3. **Skills**: Technology stack and skills
+4. **Experience**: Professional work experience
+5. **Education**: Academic background
+6. **Projects**: Portfolio of projects with descriptions
+7. **Awards**: Achievements and recognitions
+8. **Research**: Research work and publications
+9. **Contact**: Contact information and social links
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Deployment
+
+This portfolio can be easily deployed to:
+- **Vercel** (Recommended)
+- **Netlify**
+- **GitHub Pages**
+- Any static hosting service
+
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+## 👤 Author
+
+**Billal Ahmed Akash**
+- Email: akashjnu26@gmail.com
+- Phone: +8801998630384
+- Location: Dhaka, Bangladesh
+
+## 🙏 Acknowledgments
+
+- Design inspired by modern portfolio templates
+- UI components from shadcn/ui
+- Icons from Lucide React
