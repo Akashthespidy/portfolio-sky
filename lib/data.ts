@@ -215,4 +215,20 @@ export const DATA = {
       ],
     },
   ],
+  certifications: [
+    {
+      title: "Certified React Developer",
+      issuer: "Meta",
+      date: "2024",
+      link: "https://www.coursera.org",
+      image: "/images/certification-placeholder.png"
+    },
+    {
+      title: "Problem Solving (Intermediate)",
+      issuer: "HackerRank",
+      date: "2023",
+      link: "https://www.hackerrank.com",
+      image: ""
+    }
+  ],
 } as const;
