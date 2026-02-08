@@ -95,8 +95,8 @@ export const DATA = {
       start: "November 2024",
       end: "Present",
       description:
-        "Building scalable web applications using React.js, Next.js, TypeScript, and PostgreSQL. Implementing modern UI/UX with Tailwind CSS and managing databases with ORM and Neon.",
-      technologies: ["React.js", "Next.js", "TypeScript", "PostgreSQL", "Neon", "Tailwind CSS", "ORM"],
+        "Building innovative solutions leveraging OpenAI and LLM technologies for intelligent embeddings and semantic search. Developing scalable full-stack applications with React.js, Next.js, and TypeScript, while implementing modern AI-powered features and managing databases with PostgreSQL and Neon.",
+      technologies: ["React.js", "Next.js", "TypeScript", "OpenAI", "LLM", "Embeddings", "PostgreSQL", "Neon", "Tailwind CSS"],
     },
   ],
   education: [
