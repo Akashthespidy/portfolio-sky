@@ -2,11 +2,35 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
 import { DATA } from "@/lib/data";
 import { motion } from "framer-motion";
-import { Briefcase, MapPin } from "lucide-react";
+import { Briefcase, MapPin, Calendar } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring" as const,
+      stiffness: 100,
+      damping: 12,
+    },
+  },
+};
 
 export function Experience() {
   return (
@@ -16,26 +40,45 @@ export function Experience() {
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: BLUR_FADE_DELAY * 6 }}
       id="experience"
-      className="space-y-6"
+      className="space-y-8"
     >
-      <h2 className="text-3xl font-bold flex items-center gap-2">
-        <Briefcase className="h-8 w-8" />
-        Work Experience
-      </h2>
-      <div className="space-y-4">
+      <div className="space-y-2">
+        <div className="flex items-center gap-3">
+          <Briefcase className="h-8 w-8 text-primary" />
+          <h2 className="text-3xl font-bold">Work Experience</h2>
+        </div>
+        <p className="text-muted-foreground">
+          My professional journey and career highlights
+        </p>
+      </div>
+      
+      <Separator />
+      
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="space-y-6 relative"
+      >
+        {/* Timeline line */}
+        <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-transparent hidden md:block ml-4" />
+        
         {DATA.work.map((job, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            variants={itemVariants}
+            whileHover={{ scale: 1.01 }}
+            className="relative"
           >
-            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+            {/* Timeline dot */}
+            <div className="absolute left-0 top-6 w-4 h-4 rounded-full bg-primary border-4 border-background hidden md:block ml-2.5 pulse-glow" />
+            
+            <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 glass-effect border-2 hover:border-primary/50 md:ml-12">
               <CardHeader>
                 <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2">
+                  <div className="space-y-3">
+                    <div className="flex flex-wrap items-center gap-2">
                       <h3 className="text-xl font-bold">{job.title}</h3>
                       {job.badges?.map((badge) => (
                         <Badge key={badge} variant="outline" className="text-xs">
@@ -43,33 +86,44 @@ export function Experience() {
                         </Badge>
                       ))}
                     </div>
-                    <div className="text-lg font-semibold text-primary">
-                      {job.company}
+                    <div className="text-lg font-semibold">
+                      <span className="gradient-text">{job.company}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <MapPin className="h-4 w-4" />
-                      {job.location}
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-2">
+                        <MapPin className="h-4 w-4 text-primary" />
+                        {job.location}
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar className="h-4 w-4 text-primary" />
+                        {job.start} - {job.end}
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-sm text-muted-foreground whitespace-nowrap">
-                    {job.start} - {job.end}
                   </div>
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-muted-foreground">{job.description}</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  {job.description}
+                </p>
                 <div className="flex flex-wrap gap-2">
                   {job.technologies.map((tech) => (
-                    <Badge key={tech} variant="secondary" className="text-xs">
-                      {tech}
-                    </Badge>
+                    <motion.div
+                      key={tech}
+                      whileHover={{ scale: 1.1, rotate: [0, -2, 2, 0] }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Badge variant="secondary" className="text-xs hover-lift cursor-default">
+                        {tech}
+                      </Badge>
+                    </motion.div>
                   ))}
                 </div>
               </CardContent>
             </Card>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </motion.section>
   );
 }
