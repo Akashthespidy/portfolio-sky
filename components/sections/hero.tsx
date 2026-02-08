@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import { TypeWriter } from "@/components/ui/type-writer";
 import { DATA } from "@/lib/data";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Github, Linkedin, Facebook, Code, Trophy, Sparkles } from "lucide-react";
+import { Mail, MapPin, Phone, Github, Linkedin, Facebook, Code, Trophy } from "lucide-react";
 import Link from "next/link";
 
 const iconMap: Record<string, any> = {
@@ -51,7 +51,6 @@ export function Hero() {
       {/* Floating Avatar with Glow */}
       <motion.div
         variants={itemVariants}
-        className="relative"
       >
         <motion.div
           animate={{
@@ -69,22 +68,6 @@ export function Hero() {
               {DATA.initials}
             </AvatarFallback>
           </Avatar>
-        </motion.div>
-        
-        {/* Sparkle decoration */}
-        <motion.div
-          className="absolute -top-2 -right-2"
-          animate={{
-            rotate: [0, 360],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        >
-          <Sparkles className="h-8 w-8 text-primary" />
         </motion.div>
       </motion.div>
       
