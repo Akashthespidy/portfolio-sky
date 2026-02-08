@@ -40,7 +40,7 @@ export function Hero() {
             <TypeWriter
               words={[
                 "Software Engineer",
-                "Competitive Programmer",
+                "Building Innovative Solutions",
                 "Full Stack Developer",
                 "Problem Solver"
               ]}
