@@ -16,7 +16,7 @@ export const DATA = {
   description:
     "Software Engineer passionate about building scalable web applications and solving complex algorithmic problems. ACM ICPC participant and competitive programmer.",
   summary:
-    "I'm a Software Engineer at Geekly, specializing in full-stack development with React, Next.js, and TypeScript. With 1300+ problems solved across various online judges and experience in competitive programming, I bring strong problem-solving skills to building efficient, scalable applications.",
+    "I'm a Software Engineer at Geekly, where I build innovative solutions leveraging OpenAI and LLM technologies for intelligent embeddings and semantic search. Specializing in full-stack development with React, Next.js, and TypeScript, I combine my strong algorithmic foundation—built through solving 1300+ problems across various online judges and competing in ACM ICPC. My experience in competitive programming has sharpened my problem-solving abilities, enabling me to tackle complex technical challenges and optimize performance in real-world applications.",
   avatarUrl: "/images/profile.jpg",
   skills: [
     "React",
