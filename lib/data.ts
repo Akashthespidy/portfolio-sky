@@ -5,6 +5,7 @@ export interface Award {
   icon: string;
   team?: string;
   handle?: string;
+  link?: string;
 }
 
 export const DATA = {
@@ -47,7 +48,7 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/akash",
+        url: "https://github.com/akashthespidy",
         icon: "Github",
         navbar: true,
       },
@@ -96,7 +97,17 @@ export const DATA = {
       end: "Present",
       description:
         "Building innovative solutions leveraging OpenAI and LLM technologies for intelligent embeddings and semantic search. Developing scalable full-stack applications with React.js, Next.js, and TypeScript, while implementing modern AI-powered features and managing databases with PostgreSQL and Neon.",
-      technologies: ["React.js", "Next.js", "TypeScript", "OpenAI", "LLM", "Embeddings", "PostgreSQL", "Neon", "Tailwind CSS"],
+      technologies: [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "OpenAI",
+        "LLM",
+        "Embeddings",
+        "PostgreSQL",
+        "Neon",
+        "Tailwind CSS",
+      ],
     },
   ],
   education: [
@@ -171,16 +182,20 @@ export const DATA = {
     {
       title: "ACM ICPC Dhaka Regional Onsite",
       date: "2023",
-      description: "Participated in ACM International Collegiate Programming Contest (ICPC), Dhaka Regional Onsite",
+      description:
+        "Participated in ACM International Collegiate Programming Contest (ICPC), Dhaka Regional Onsite",
       team: "JnU_Lazy_Penguin",
       icon: "trophy",
+      link: "https://icpc.global",
     },
     {
       title: "IEEEXtreme Programming Competition 17.0",
       date: "2023",
-      description: "Ranked 6th in Bangladesh and 1162nd globally out of 7091 teams",
+      description:
+        "Ranked 6th in Bangladesh and 1162nd globally out of 7091 teams",
       team: "ARSfire",
       icon: "award",
+      link: "https://ieeextreme.org",
     },
     {
       title: "JNU Intra University Programming Contest",
@@ -188,6 +203,7 @@ export const DATA = {
       description: "Ranked 5th out of 50 teams",
       handle: "Sky_rush",
       icon: "medal",
+      link: "https://jnu.ac.bd",
     },
     {
       title: "UITS IUPC",
@@ -195,18 +211,22 @@ export const DATA = {
       description: "Ranked 26th",
       team: "JnU_Lazy_Penguin",
       icon: "star",
+      link: "https://uits-iupc.com",
     },
     {
       title: "JNU Intra University Programming Contest - Problem Setter",
       date: "2024",
       description: "Problem setter and lead team member in the arrangement",
       icon: "code",
+      link: "https://jnu.ac.bd/contests",
     },
   ],
   research: [
     {
-      title: "A Blockchain-Based Electronic Voting System Using Sidechain and Smart Contracts",
-      description: "Research focused on enhancing security in electronic voting systems, optimizing vote counting to O(1) time complexity, and reducing costs through blockchain sidechains.",
+      title:
+        "A Blockchain-Based Electronic Voting System Using Sidechain and Smart Contracts",
+      description:
+        "Research focused on enhancing security in electronic voting systems, optimizing vote counting to O(1) time complexity, and reducing costs through blockchain sidechains.",
       highlights: [
         "Security Enhancement",
         "Vote Counting at time complexity O(1)",
@@ -221,14 +241,14 @@ export const DATA = {
       issuer: "Meta",
       date: "2024",
       link: "https://www.coursera.org",
-      image: "/images/certification-placeholder.png"
+      image: "/images/certification-placeholder.png",
     },
     {
       title: "Problem Solving (Intermediate)",
       issuer: "HackerRank",
       date: "2023",
       link: "https://www.hackerrank.com",
-      image: ""
-    }
+      image: "",
+    },
   ],
 } as const;
