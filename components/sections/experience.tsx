@@ -103,9 +103,11 @@ export function Experience() {
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  {job.description}
-                </p>
+                <div className="text-muted-foreground leading-relaxed space-y-1">
+                  {job.description.split("\n").map((line, i) => (
+                    <p key={i}>{line}</p>
+                  ))}
+                </div>
                 <div className="flex flex-wrap gap-2">
                   {job.technologies.map((tech) => (
                     <motion.div

@@ -17,7 +17,7 @@ export const DATA = {
   description:
     "Software Engineer passionate about building scalable web applications and solving complex algorithmic problems. ACM ICPC participant and competitive programmer.",
   summary:
-    "I'm a Software Engineer at Geekly, where I build innovative solutions leveraging OpenAI and LLM technologies for intelligent embeddings and semantic search. Specializing in full-stack development with React, Next.js, and TypeScript, I combine my strong algorithmic foundation—built through solving 1300+ problems across various online judges and competing in ACM ICPC. My experience in competitive programming has sharpened my problem-solving abilities, enabling me to tackle complex technical challenges and optimize performance in real-world applications.",
+    "Full Stack Engineer with 1+ year of experience building AI-enabled innovative web app products using Next.js, React.js, OpenAI, TypeScript, PostgreSQL, and LLM integrations. My strong algorithmic foundation—built through solving 1300+ problems across various online judges and competing in ACM ICPC—has sharpened my problem-solving abilities, enabling me to tackle complex technical challenges and optimize performance in real-world applications.",
   avatarUrl: "/images/profile.jpg",
   skills: [
     "React",
@@ -54,25 +54,25 @@ export const DATA = {
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://linkedin.com/in/akash",
+        url: "https://www.linkedin.com/in/billal-ahmed-akash-841609197/",
         icon: "Linkedin",
         navbar: true,
       },
       Facebook: {
         name: "Facebook",
-        url: "https://www.facebook.com/billal.ahmed.akash.2024/",
+        url: "https://www.facebook.com/billal.ahmed.akash.2024",
         icon: "Facebook",
         navbar: true,
       },
       Codeforces: {
         name: "Codeforces",
-        url: "https://codeforces.com/profile/akash",
+        url: "https://codeforces.com/profile/sky_rush",
         icon: "Code",
         navbar: true,
       },
       LeetCode: {
         name: "LeetCode",
-        url: "https://leetcode.com/akash",
+        url: "https://leetcode.com/sky_rush",
         icon: "Trophy",
         navbar: true,
       },
@@ -96,7 +96,7 @@ export const DATA = {
       start: "November 2024",
       end: "Present",
       description:
-        "Building innovative solutions leveraging OpenAI and LLM technologies for intelligent embeddings and semantic search. Developing scalable full-stack applications with React.js, Next.js, and TypeScript, while implementing modern AI-powered features and managing databases with PostgreSQL and Neon.",
+        "• Built AI commerce assistant for Messenger/ social channels automating product discovery, ordering, and support.\n• Reduced manual customer support workload by 70–80% through intelligent automation.\n• Designed tool-calling LLM workflows for ordering, search, and contextual responses.\n• Implemented embeddings and vector search to improve recommendation relevance.\n• Built scalable Next.js backend systems with webhooks, sessions, and authentication.\n• Deployed production workloads on Railway with reliable low-latency performance.\n• Collaborated with product and design teams in a fast-paced startup environment.",
       technologies: [
         "React.js",
         "Next.js",
@@ -126,7 +126,7 @@ export const DATA = {
     {
       title: "Foodies",
       href: "#",
-      dates: "2024",
+      dates: "2025",
       active: true,
       description:
         "A recipe book web app where users can share their favorite recipes and discover new ones from the community. Built with modern Next.js features and beautiful UI.",
@@ -134,47 +134,66 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "#",
+          href: "https://foodies-wine-tau.vercel.app/",
           icon: "Globe",
         },
       ],
-      image: "/foodies.png",
+      //image: "/foodies.png",
       video: "",
     },
     {
-      title: "Spin Wheel App",
+      title: "Competitive Programming Analytics Platform (CP Tracker)",
       href: "#",
-      dates: "2024",
+      dates: "2026",
       active: true,
       description:
-        "An interactive web app where users can input names and spin a virtual wheel to select a random name. Features customizable spin duration and smooth animations.",
-      technologies: ["HTML", "CSS", "JavaScript"],
+        "Built an AI-powered analytics platform for competitive programmers with rating insights, AI coaching, and custom practice plans.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "OpenAI API",
+        "Jotai",
+        "Zod",
+      ],
       links: [
         {
           type: "Website",
-          href: "#",
+          href: "https://cp-tracker-black.vercel.app/",
           icon: "Globe",
         },
       ],
-      image: "/spinwheel.png",
+      image: "",
       video: "",
     },
     {
-      title: "Online Super Shop",
+      title: "ZeroHero — AI-Powered Progress Tracker",
       href: "#",
-      dates: "2023",
+      dates: "2026",
       active: true,
       description:
-        "A user-friendly e-commerce platform named 'kinakata.com' with modern UI and essential shopping functionalities.",
-      technologies: ["HTML", "CSS", "Bootstrap"],
+        "Developed an AI productivity SaaS with goal tracking, streaks, dashboards, and personalized mentorship.",
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Drizzle ORM",
+        "Neon PostgreSQL",
+        "Clerk",
+        "Jotai",
+        "Zod",
+        "OpenAI API",
+      ],
       links: [
         {
           type: "Website",
-          href: "#",
+          href: "https://progress-tracker-tau-flame.vercel.app/",
           icon: "Globe",
         },
       ],
-      image: "/supershop.png",
+      image: "",
       video: "",
     },
   ],
@@ -186,7 +205,7 @@ export const DATA = {
         "Participated in ACM International Collegiate Programming Contest (ICPC), Dhaka Regional Onsite",
       team: "JnU_Lazy_Penguin",
       icon: "trophy",
-      link: "https://icpc.global",
+      link: "https://icpc.global/regionals/finder/Dhaka-2024-2024/standings",
     },
     {
       title: "IEEEXtreme Programming Competition 17.0",
@@ -195,7 +214,7 @@ export const DATA = {
         "Ranked 6th in Bangladesh and 1162nd globally out of 7091 teams",
       team: "ARSfire",
       icon: "award",
-      link: "https://ieeextreme.org",
+      link: "https://ieeextreme.org/ieeextreme-17-0-ranking/",
     },
     {
       title: "JNU Intra University Programming Contest",
@@ -203,7 +222,7 @@ export const DATA = {
       description: "Ranked 5th out of 50 teams",
       handle: "Sky_rush",
       icon: "medal",
-      link: "https://jnu.ac.bd",
+      link: "https://toph.co/contests/training/2cbypdx/standings",
     },
     {
       title: "UITS IUPC",
@@ -211,14 +230,14 @@ export const DATA = {
       description: "Ranked 26th",
       team: "JnU_Lazy_Penguin",
       icon: "star",
-      link: "https://uits-iupc.com",
+      link: "https://vjudge.net/contest/538028#%23rank",
     },
     {
       title: "JNU Intra University Programming Contest - Problem Setter",
       date: "2024",
       description: "Problem setter and lead team member in the arrangement",
       icon: "code",
-      link: "https://jnu.ac.bd/contests",
+      link: "https://www.facebook.com/events/1201951654114921?active_tab=about",
     },
   ],
   research: [
@@ -237,18 +256,18 @@ export const DATA = {
   ],
   certifications: [
     {
-      title: "Certified React Developer",
-      issuer: "Meta",
+      title: "Certified Next.js Developer",
+      issuer: "Udemy",
       date: "2024",
       link: "https://www.coursera.org",
-      image: "/images/certification-placeholder.png",
+      //image: "/images/certification-placeholder.png",
     },
     {
       title: "Problem Solving (Intermediate)",
       issuer: "HackerRank",
       date: "2023",
       link: "https://www.hackerrank.com",
-      image: "",
+      //image: "",
     },
   ],
 } as const;
