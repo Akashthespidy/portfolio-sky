@@ -89,13 +89,13 @@ export function Experience() {
                     <div className="text-lg font-semibold">
                       <span className="gradient-text">{job.company}</span>
                     </div>
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+                    <div className="flex flex-wrap items-center gap-4 font-mono text-xs text-muted-foreground/80 tracking-tight">
                       <div className="flex items-center gap-2">
-                        <MapPin className="h-4 w-4 text-primary" />
-                        {job.location}
+                        <MapPin className="h-3.5 w-3.5 text-primary" />
+                        location: &quot;{job.location}&quot;
                       </div>
                       <div className="flex items-center gap-2">
-                        <Calendar className="h-4 w-4 text-primary" />
+                        <Calendar className="h-3.5 w-3.5 text-primary" />
                         {job.start} - {job.end}
                       </div>
                     </div>
@@ -112,10 +112,10 @@ export function Experience() {
                   {job.technologies.map((tech) => (
                     <motion.div
                       key={tech}
-                      whileHover={{ scale: 1.1, rotate: [0, -2, 2, 0] }}
+                      whileHover={{ scale: 1.05, rotate: [0, -1, 1, 0] }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <Badge variant="secondary" className="text-xs hover-lift cursor-default">
+                      <Badge variant="secondary" className="text-xs font-mono font-medium hover-lift cursor-default">
                         {tech}
                       </Badge>
                     </motion.div>

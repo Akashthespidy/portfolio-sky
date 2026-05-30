@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Home, User, Briefcase, Code, Mail } from "lucide-react";
+import { Home, User, Briefcase, Code, Mail, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -15,12 +15,11 @@ const navItems = [
 
 export function FloatingNav() {
   const [activeSection, setActiveSection] = useState("");
-  const [isVisible, setIsVisible] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show navbar after scrolling 100px
-      setIsVisible(window.scrollY > 100);
+      setIsScrolled(window.scrollY > 50);
 
       // Update active section based on scroll position
       const sections = navItems
@@ -44,12 +43,12 @@ export function FloatingNav() {
         .filter(Boolean);
 
       const currentSection = sections.find(
-        (section) => section && section.top <= 100 && section.bottom > 100
+        (section) => section && section.top <= 120 && section.bottom > 120
       );
 
       if (currentSection) {
         setActiveSection(currentSection.id);
-      } else if (window.scrollY < 100) {
+      } else if (window.scrollY < 50) {
         // Set home as active when at the top
         setActiveSection("#");
       }
@@ -61,43 +60,92 @@ export function FloatingNav() {
   }, []);
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: isVisible ? 0 : -100 }}
-      transition={{ duration: 0.3 }}
-      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 px-6 py-3 rounded-full bg-card/80 backdrop-blur-lg border border-border shadow-lg"
-    >
-      <div className="flex items-center gap-2">
-        {navItems.map((item) => {
-          const Icon = item.icon;
-          const isActive = activeSection === item.href;
-          return (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={`relative px-4 py-2 rounded-full transition-all ${
-                isActive
-                  ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground"
-              }`}
+    <>
+      <motion.header
+        animate={{
+          y: 0,
+          width: isScrolled ? "auto" : "100%",
+          maxWidth: isScrolled ? "500px" : "100%",
+          borderRadius: isScrolled ? "9999px" : "0px",
+          top: isScrolled ? "16px" : "0px",
+          borderWidth: isScrolled ? "1px" : "0px",
+          boxShadow: isScrolled ? "0 20px 25px -5px oklch(0 0 0 / 0.1)" : "none",
+        }}
+        transition={{ type: "spring", stiffness: 200, damping: 25 }}
+        className={`fixed left-1/2 -translate-x-1/2 z-50 flex items-center justify-between px-6 py-3 transition-all duration-300 ${
+          isScrolled 
+            ? "bg-card/85 backdrop-blur-xl border-border" 
+            : "bg-background/40 backdrop-blur-md border-border/30 w-full border-b"
+        }`}
+        style={{
+          transformStyle: "preserve-3d",
+        }}
+      >
+        {/* Left Side: Monospace branding */}
+        {!isScrolled && (
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="flex items-center gap-2 font-mono text-sm font-semibold tracking-tight text-foreground select-none"
+          >
+            <span className="text-primary animate-pulse">&gt;_</span>
+            <span>sky_rush</span>
+            <span className="text-muted-foreground font-normal">~/home</span>
+          </motion.div>
+        )}
+
+        {/* Center: Nav links */}
+        <div className={`flex items-center gap-1 ${isScrolled ? "mx-auto" : ""}`}>
+          {navItems.map((item) => {
+            const Icon = item.icon;
+            const isActive = activeSection === item.href;
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`relative px-3 py-1.5 rounded-full transition-all duration-200 select-none ${
+                  isActive
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {isActive && (
+                  <motion.div
+                    layoutId="active-nav"
+                    className="absolute inset-0 bg-primary/10 rounded-full"
+                    transition={{ type: "spring", duration: 0.6 }}
+                  />
+                )}
+                <div className="relative flex items-center gap-1.5">
+                  <Icon className="h-3.5 w-3.5" />
+                  <span className={`text-xs font-medium ${isScrolled ? "hidden md:inline" : "hidden sm:inline"}`}>
+                    {item.name}
+                  </span>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Right Side: Contact CTA */}
+        {!isScrolled && (
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="hidden sm:flex items-center"
+          >
+            <motion.a
+              href="mailto:akashjnu26@gmail.com"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-primary-foreground font-mono text-xs font-medium border border-primary/20 hover:border-primary transition-all duration-300"
             >
-              {isActive && (
-                <motion.div
-                  layoutId="active-nav"
-                  className="absolute inset-0 bg-primary/10 rounded-full"
-                  transition={{ type: "spring", duration: 0.6 }}
-                />
-              )}
-              <div className="relative flex items-center gap-2">
-                <Icon className="h-4 w-4" />
-                <span className="text-sm font-medium hidden md:inline">
-                  {item.name}
-                </span>
-              </div>
-            </Link>
-          );
-        })}
-      </div>
-    </motion.nav>
+              <span>Hire Me</span>
+              <ArrowRight className="h-3 w-3" />
+            </motion.a>
+          </motion.div>
+        )}
+      </motion.header>
+    </>
   );
 }

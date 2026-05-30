@@ -37,15 +37,15 @@ export function Education() {
                     <div className="text-lg font-semibold text-primary">
                       {edu.school}
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <MapPin className="h-4 w-4" />
-                      {edu.location}
+                    <div className="flex items-center gap-2 font-mono text-xs text-muted-foreground/80 tracking-tight">
+                      <MapPin className="h-3.5 w-3.5 text-primary" />
+                      location: &quot;{edu.location}&quot;
                     </div>
-                    <div className="text-sm font-medium">
-                      CGPA: {edu.cgpa}
+                    <div className="font-mono text-xs text-muted-foreground/80 tracking-tight">
+                      gpa: <span className="text-primary font-bold">{edu.cgpa}</span> / 4.0
                     </div>
                   </div>
-                  <div className="text-sm text-muted-foreground whitespace-nowrap">
+                  <div className="font-mono text-xs text-muted-foreground/80 tracking-tight whitespace-nowrap bg-muted px-2.5 py-1 rounded-full border">
                     {edu.start} - {edu.end}
                   </div>
                 </div>

@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { DATA } from "@/lib/data";
 import { motion } from "framer-motion";
 import { User, Quote } from "lucide-react";
+import { DeveloperTerminal } from "./developer-terminal";
 
 const BLUR_FADE_DELAY = 0.04;
 
@@ -49,6 +50,16 @@ export function About() {
           </div>
         </CardContent>
       </Card>
+
+      {/* Interactive Developer Terminal */}
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+      >
+        <DeveloperTerminal />
+      </motion.div>
     </motion.section>
   );
 }

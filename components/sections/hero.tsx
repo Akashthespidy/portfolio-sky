@@ -93,36 +93,36 @@ export function Hero() {
           <Separator className="my-4" />
         </motion.div>
         
-        {/* Contact Info with Stagger */}
+        {/* Contact Info with Stagger - Highlighted Badges */}
         <motion.div 
           variants={itemVariants}
-          className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground md:justify-start"
+          className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono tracking-tight text-foreground md:justify-start"
         >
           <motion.div 
-            className="flex items-center gap-2 hover-lift px-3 py-1.5 rounded-lg hover:bg-accent/50"
+            className="flex items-center gap-2 hover-lift px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 hover:border-primary/40 shadow-sm"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <MapPin className="h-4 w-4 text-primary" />
+            <MapPin className="h-3.5 w-3.5 text-primary" />
             <span>{DATA.location}</span>
           </motion.div>
           
           <motion.a 
             href={`mailto:${DATA.contact.email}`}
-            className="flex items-center gap-2 hover-lift px-3 py-1.5 rounded-lg hover:bg-accent/50 hover:text-primary transition-colors"
+            className="flex items-center gap-2 hover-lift px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 hover:border-primary/40 hover:text-primary shadow-sm transition-colors"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Mail className="h-4 w-4 text-primary" />
+            <Mail className="h-3.5 w-3.5 text-primary" />
             <span>{DATA.contact.email}</span>
           </motion.a>
           
           <motion.div 
-            className="flex items-center gap-2 hover-lift px-3 py-1.5 rounded-lg hover:bg-accent/50"
+            className="flex items-center gap-2 hover-lift px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 hover:bg-primary/20 hover:border-primary/40 shadow-sm"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Phone className="h-4 w-4 text-primary" />
+            <Phone className="h-3.5 w-3.5 text-primary" />
             <span>{DATA.contact.tel}</span>
           </motion.div>
         </motion.div>
@@ -142,16 +142,16 @@ export function Hero() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.6 + index * 0.1 }}
-                  whileHover={{ scale: 1.1, rotate: [0, -5, 5, 0] }}
+                  whileHover={{ scale: 1.05, rotate: [0, -2, 2, 0] }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Link
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 rounded-lg border bg-card px-4 py-2.5 text-sm font-medium transition-all hover:bg-accent hover:shadow-lg hover:border-primary/50 glass-effect"
+                    className="flex items-center gap-2 rounded-lg border bg-card px-3.5 py-2 text-xs font-mono font-medium transition-all hover:bg-accent hover:shadow-lg hover:border-primary/50 glass-effect"
                   >
-                    {Icon && <Icon className="h-4 w-4" />}
+                    {Icon && <Icon className="h-3.5 w-3.5 text-primary" />}
                     <span>{social.name}</span>
                   </Link>
                 </motion.div>

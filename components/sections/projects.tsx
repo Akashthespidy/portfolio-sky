@@ -146,8 +146,8 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
                 {project.title}
               </h3>
             </div>
-            <p className="text-sm text-muted-foreground font-medium">
-              {project.dates}
+            <p className="font-mono text-xs text-muted-foreground/80 tracking-tight">
+              date: &quot;{project.dates}&quot;
             </p>
           </div>
         </CardHeader>
@@ -162,7 +162,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
               <Badge
                 key={tech}
                 variant="secondary"
-                className="text-xs hover-lift cursor-default"
+                className="text-xs font-mono font-medium hover-lift cursor-default"
               >
                 {tech}
               </Badge>
@@ -179,9 +179,9 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
                 >
                   <Link
                     href={link.href}
-                    className="flex items-center gap-2 text-sm font-medium text-primary hover:underline px-3 py-1.5 rounded-lg hover:bg-accent/50 transition-colors"
+                    className="flex items-center gap-1.5 font-mono text-xs text-primary hover:underline px-3 py-1.5 rounded-lg hover:bg-accent/50 transition-colors"
                   >
-                    <ExternalLink className="h-4 w-4" />
+                    <ExternalLink className="h-3.5 w-3.5" />
                     {link.type}
                   </Link>
                 </motion.div>
