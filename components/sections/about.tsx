@@ -38,15 +38,20 @@ export function About() {
         <CardContent className="pt-6">
           <div className="relative">
             <Quote className="absolute -top-2 -left-2 h-8 w-8 text-primary/20" />
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-lg text-muted-foreground leading-relaxed pl-6"
-            >
-              {DATA.summary}
-            </motion.p>
+            <div className="pl-6 space-y-4">
+              {DATA.summary.split("\n\n").map((para, i) => (
+                <motion.p
+                  key={i}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 + i * 0.1, duration: 0.8 }}
+                  className="text-lg text-muted-foreground leading-relaxed"
+                >
+                  {para}
+                </motion.p>
+              ))}
+            </div>
           </div>
         </CardContent>
       </Card>

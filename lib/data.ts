@@ -15,9 +15,9 @@ export const DATA = {
   location: "Dhaka, Bangladesh",
   locationLink: "https://www.google.com/maps/place/dhaka",
   description:
-    "Software Engineer passionate about building scalable web applications and solving complex algorithmic problems. ACM ICPC participant and competitive programmer.",
+    "Co-Founder & Full-Stack Engineer building AI-powered SaaS products. Passionate about scalable systems, RAG-based AI, and turning ideas into real products.",
   summary:
-    "Full Stack Engineer with 1+ year of experience building AI-enabled innovative web app products using Next.js, React.js, OpenAI, TypeScript, PostgreSQL, and LLM integrations. My strong algorithmic foundation—built through solving 1300+ problems across various online judges and competing in ACM ICPC—has sharpened my problem-solving abilities, enabling me to tackle complex technical challenges and optimize performance in real-world applications.",
+    "I'm a full-stack software engineer and startup co-founder with hands-on experience building a multi-tenant AI-powered commerce platform from the ground up. I specialize in Next.js, TypeScript, and modern backend systems—and I genuinely enjoy the process of going from a rough idea to a working product that real users interact with.\n\nMost recently, I've been deep in the world of RAG-based AI systems, integrating conversational agents into messaging platforms like WhatsApp, Instagram, and Facebook Messenger to automate product discovery, customer support, and order processing. It's the kind of work that sits right at the intersection of AI and real-world usability, which is exactly where I want to be.\n\nOutside of building products, I've been involved in the competitive programming community at Jagannath University—mentoring students, organizing contests, and helping build a culture around problem-solving. I find that working through hard algorithmic challenges has made me a sharper engineer overall.\n\nRight now, I'm focused on AI-driven SaaS systems and scalable web applications—always looking for the next interesting problem to solve.",
   avatarUrl: "/images/profile.jpg",
   skills: [
     "React",
