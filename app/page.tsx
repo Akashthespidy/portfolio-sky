@@ -26,11 +26,12 @@ export default function Home() {
         <div className="w-full max-w-5xl space-y-24">
           <Hero />
           <About />
-          <Skills />
-          <Experience />
-          <Leadership />
           <Education />
+          <Experience />
+          <Skills />
+
           <Projects />
+          <Leadership />
           <Awards />
           <Certification />
           <Research />

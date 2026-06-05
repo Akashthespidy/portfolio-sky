@@ -42,7 +42,9 @@ export function Education() {
                       location: &quot;{edu.location}&quot;
                     </div>
                     <div className="font-mono text-xs text-muted-foreground/80 tracking-tight">
-                      gpa: <span className="text-primary font-bold">{edu.cgpa}</span> / 4.0
+                      CGPA:{" "}
+                      <span className="text-primary font-bold">{edu.cgpa}</span>{" "}
+                      / 4.0
                     </div>
                   </div>
                   <div className="font-mono text-xs text-muted-foreground/80 tracking-tight whitespace-nowrap bg-muted px-2.5 py-1 rounded-full border">

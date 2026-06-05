@@ -8,7 +8,7 @@ import { Trophy, Award, Medal, Star, Code, Cpu, ExternalLink, Globe } from "luci
 
 const BLUR_FADE_DELAY = 0.04;
 
-const iconMap: Record<string, any> = {
+const iconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
   award: Award,
   medal: Medal,
   star: Star,
