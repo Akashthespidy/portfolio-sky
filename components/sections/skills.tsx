@@ -99,22 +99,22 @@ const SKILL_GROUPS = [
   {
     title: "Languages",
     icon: Terminal,
-    skills: ["C++", "Python", "Java", "TypeScript", "JavaScript", "Solidity"]
+    skills: ["C++", "Python", "Java", "TypeScript", "JavaScript", "C"]
   },
   {
     title: "Frontend & UI",
     icon: Cpu,
-    skills: ["React", "Next.js", "Tailwind CSS", "HTML5", "Jotai", "Radix UI"]
+    skills: ["React", "Next.js", "Tailwind CSS", "HTML5", "Jotai"]
   },
   {
     title: "Backend & Databases",
     icon: Database,
-    skills: ["Node.js", "PostgreSQL", "Neon", "Express", "REST APIs"]
+    skills: ["Node.js", "PostgreSQL", "Neon", "Express", "REST APIs", "ChromaDB", "MySQL", "MongoDB"]
   },
   {
     title: "AI & Tools & Utilities",
     icon: Blocks,
-    skills: ["OpenAI API", "LLMs", "Vector Embeddings", "Git", "Linux", "Docker"]
+    skills: ["OpenAI API", "LLMs", "Vector Embeddings", "Git", "Linux", "Docker","Vercel AI SDK"]
   }
 ];
 

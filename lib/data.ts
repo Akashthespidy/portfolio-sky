@@ -31,7 +31,6 @@ export const DATA = {
     "Java",
     "Machine Learning",
     "Blockchain",
-    "Solidity",
     "Git",
     "Linux",
   ],
@@ -268,6 +267,42 @@ export const DATA = {
       date: "2023",
       link: "https://www.hackerrank.com",
       //image: "",
+    },
+  ],
+
+  leadership: [
+    {
+      role: "IEEE Student Member & Co-Organizer",
+      organization: "IEEE — Jagannath University Student Branch",
+      period: "2022",
+      icon: "users",
+      highlights: [
+        "Active IEEE student member contributing to technical and organizational activities",
+        "Co-organized IEEE chapter events, workshops, and seminars for the student community",
+        "Collaborated with faculty advisors and fellow members to promote engineering culture on campus",
+      ],
+    },
+    {
+      role: "Competitive Programming Mentor",
+      organization: "Jagannath University",
+      period: "2024 – Present",
+      icon: "code",
+      highlights: [
+        "Mentoring junior students in competitive programming algorithms, data structures, and problem-solving techniques",
+        "Conducting regular practice sessions and contest discussions to help students improve their skills",
+        "Collaborating with seniors, faculty, and students to build a strong CP culture at JNU",
+      ],
+    },
+    {
+      role: "Lead Organizer",
+      organization: "JNU Intra University Programming Contest (IUPC) 2024",
+      period: "2024",
+      icon: "trophy",
+      highlights: [
+        "Led the end-to-end organization of JNU IUPC 2024, a university-wide competitive programming contest",
+        "Coordinated with teachers, senior students, and peers to manage logistics, problems, and judging",
+        "Served as problem setter, ensuring a high-quality and fair contest experience for all participants",
+      ],
     },
   ],
 } as const;
